@@ -1,0 +1,74 @@
+# Application Serveur – Notifications Push
+
+## Contexte
+
+### Description
+Il s'agit d'un projet réaliser durant mon alternance dans le but de me former aux service worker et noyification push.
+
+Ceci est la partie serveur du projet qui utilise le framework Spring et le langage Java, il permet d’envoyer des notifications push aux clients. Il gère les abonnements et envoie les payloads JSON encodés en UTF-8 aux navigateurs compatibles.
+
+### Projet lié
+Cette application est utilisé conjointement avec le projet client disponible ici :
+https://github.com/MateoDubernet/service-worker-client
+
+---
+
+## Prérequis
+
+- **Java 11** (Amazon Corretto 11 recommandé)
+- **IntelliJ IDEA** (ou tout autre IDE compatible Spring Boot)
+- **PostgreSQL** pour la base de données
+---
+
+## Installation et lancement
+### 1. Cloner le projet
+```bash
+    git clone https://github.com/MateoDubernet/service-worker-server.git
+```
+
+### 2. Aller sur le projet
+- Ouvrir le projet dans IntelliJ
+
+### 3. Configuration du projet
+1. **Configurer Java 11 (Corretto) dans IntelliJ**
+    - Aller dans **File → Project Structure → Project**
+    - Choisir **Project SDK → Corretto 11**
+    - S'assurer que le **Project language level** est au moins `11`.
+
+
+2. **Ajouter une configuration pour le projet**
+    - Aller dans **Current File → Edit configurations...**
+    - Ajouter une configuration **Application**
+    - Dans **Build & run -> Main class** sélectionner : **com.example.demo.DemoApplication**
+
+
+3. **Connexion à la base de données**
+   - Dans `src/main/resources/application.properties` remplacer les valeurs de connexions par celles adapter
+   - Créer la base de données **service_worker** avec postgreSQL et charger le fichier **service_worker.sql**
+
+### 4. Lancer l’application côté serveur
+Appuyer sur le bouton play de IntellIj
+
+### 5. Lancer l’application côté client
+Lien client: https://github.com/MateoDubernet/service-worker-client
+
+---
+
+## Fonctionnalités
+**Gestion des abonnements :**
+- L’utilisateur envoie sa Push Subscription (endpoint + clés p256dh et auth) via le client
+- Le serveur stocke cette subscription en base de données PostgreSQL.
+
+**Envoi de notifications :**
+- Le serveur reçoit une requête pour envoyer une notification.
+- Le payload est converti en JSON et encodé en UTF-8.
+- La notification est envoyée au navigateur via le service worker et le Push API.
+
+
+
+
+
+
+
+
+
