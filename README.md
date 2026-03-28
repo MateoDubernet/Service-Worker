@@ -5,6 +5,7 @@ Ce projet a été réalisé durant mon alternance dans le but de me former à l'
 
 L'architecture se compose de deux parties :
 - Client (Angular) : Gère l'interface utilisateur, l'enregistrement du Service Worker et la demande de permissions.
+
 - Serveur (Spring Boot) : Gère le stockage des abonnements (Push Subscriptions) dans une base PostgreSQL et l'envoi des payloads de notification.
 
 ---
