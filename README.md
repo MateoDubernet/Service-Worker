@@ -26,7 +26,7 @@ L'architecture se compose de deux parties :
 ### 1. Clonage des dépôts
 1. Cloner le client :
 ```bash
-git clone https://github.com/MateoDubernet/service-worker-client.git
+    git clone https://github.com/MateoDubernet/service-worker-client.git
 ```
 
 2. Cloner le serveur :
@@ -50,7 +50,11 @@ git clone https://github.com/MateoDubernet/service-worker-client.git
 ## Fonctionnement du Système
 ### Flux de travail
 1. Activation : L'utilisateur clique sur "Activer notification". Le navigateur demande la permission et enregistre le Service Worker.
+
 2. Abonnement : Le client génère une Push Subscription (endpoint + clés) et l'envoie au serveur qui la stocke en base de données.
+
 3. Déclenchement : L'utilisateur clique sur "Envoyer notification". Le client appelle le serveur.
+
 4. Envoi : Le serveur récupère l'abonnement, crée un payload JSON encodé en UTF-8 et l'envoie via la Push API.
+
 5. Réception : Le Service Worker reçoit l'événement push et affiche la notification même si l'onglet est fermé.
