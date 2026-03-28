@@ -35,15 +35,15 @@ git clone https://github.com/MateoDubernet/service-worker-client.git
 ```
 
 ### 2. Configuration du Serveur (Back-end)
-1. Base de données : Créez une base de données nommée service_worker dans PostgreSQL et chargez le fichier service_worker.sql
-2. Propriétés : Modifiez src/main/resources/application.properties avec vos identifiants de connexion
-3. IDE : Ouvrez le projet dans IntelliJ, configurez le SDK sur Java 11 et lancez la classe principale com.example.demo.DemoApplication
+1. Base de données : Créez une base de données nommée service_worker dans PostgreSQL et chargez le fichier service_worker.sql.
+2. Propriétés : Modifiez src/main/resources/application.properties avec vos identifiants de connexion.
+3. IDE : Ouvrez le projet dans IntelliJ, configurez le SDK sur Java 11 et lancez la classe principale com.example.demo.DemoApplication.
 
 ### 3. Configuration du Client (Front-end)
-1. Accédez au dossier : cd service-worker-client
-2. Installez les dépendances : npm install
-3. Lancez l'application : ng serve
-4. Ouvrez votre navigateur à l'adresse : http://localhost:4200
+1. Accédez au dossier : cd service-worker-client.
+2. Installez les dépendances : npm install.
+3. Lancez l'application : ng serve.
+4. Ouvrez votre navigateur à l'adresse : http://localhost:4200.
 
 ---
 
