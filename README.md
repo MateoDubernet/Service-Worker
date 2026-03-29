@@ -8,6 +8,8 @@ Points clés techniques :
 - Backend (Spring Boot) : API REST pour la gestion des Push Subscriptions et orchestration de l'envoi des payloads via la Web Push API.
 - Infrastructure : Conteneurisation complète avec Docker pour un déploiement agnostique.
 
+**Prérequis pour ce projet :** Navigateur compatible avec les services workers et notifications push de préférence Chrome ou Firefox.
+
 ---
 
 ## Installation et Lancement
@@ -38,7 +40,6 @@ Assurez-vous que les ports 80 et 8080 ne sont pas déjà utilisés par une autre
 **Client (Front-end) :**
   - Node.js & npm
   - Angular CLI (npm install -g @angular/cli)
-  - Navigateur compatible (Chrome/Firefox)
 
 **Serveur (Back-end) :**
   - Java 11 (Amazon Corretto recommandé)
