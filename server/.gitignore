@@ -1,0 +1,48 @@
+/target/
+/bin/
+/.settings
+/.metadata
+/.classpath
+/data/
+/.project
+/backup_tmp/
+
+
+HELP.md
+/target/
+!.mvn/wrapper/maven-wrapper.jar
+/log/
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+/build/
+
+### VS Code ###
+.vscode/
+/bin/
+/mvnw
+/mvnw.cmd
+/lib/
+
+/data/
+/id_file
+/.scannerwork/

@@ -1,46 +1,58 @@
 # Projet Fullstack – Notifications Push (Angular & Spring Boot)
 
-## Contexte
-Ce projet a été réalisé durant mon alternance dans le but de me former à l'utilisation des Service Workers et des Notifications Push.
+## Présentation
+Ce projet a été réalisé dans un cadre d'étude et d'auto-formation durant mon alternance. L'objectif était de maîtriser le cycle de vie des Service Workers et l'implémentation du protocole Web Push.
 
-L'architecture se compose de deux parties :
-- Client (Angular) : Gère l'interface utilisateur, l'enregistrement du Service Worker et la demande de permissions.
+Points clés techniques :
+    - Frontend (Angular) : Gestion du cycle de vie du Service Worker, interception des événements Push, et gestion des permissions navigateurs.
 
-- Serveur (Spring Boot) : Gère le stockage des abonnements (Push Subscriptions) dans une base PostgreSQL et l'envoi des payloads de notification.
+    - Backend (Spring Boot) : API REST pour la gestion des Push Subscriptions et orchestration de l'envoi des payloads via la Web Push API.
 
----
-
-## Prérequis
-### Client (Front-end)
-- Node.js & npm
-- Angular CLI (npm install -g @angular/cli)
-- Navigateur compatible (Chrome/Firefox)
-
-### Serveur (Back-end)
-- Java 11 (Amazon Corretto recommandé)
-- PostgreSQL
-- IntelliJ IDEA (ou autre IDE Java)
+    - Infrastructure : Conteneurisation complète avec Docker pour un déploiement agnostique.
 
 ---
 
 ## Installation et Lancement
-### 1. Clonage des dépôts
-1. Cloner le client :
+### 1. Clonage du dépôt
 ```bash
-    git clone https://github.com/MateoDubernet/service-worker-client.git
+    git clone https://github.com/MateoDubernet/service-worker.git
 ```
 
-2. Cloner le serveur :
+### 2. Installation Rapide
+Le projet est entièrement conteneurisé. Une seule commande suffit pour lancer l'ensemble de l'architecture (Frontend, Backend, Base de données).
+
+**Prérequis :** Docker Desktop installé et lancé.
+
+#### 2.1 Lancement de l'application
 ```bash
-    git clone https://github.com/MateoDubernet/service-worker-server.git
+    docker-compose up --build
 ```
 
-### 2. Configuration du Serveur (Back-end)
+#### 2.2 Accès
+- Interface Client : http://localhost (Port 80)
+- API Backend : http://localhost:8080
+
+[!IMPORTANT]
+Assurez-vous que les ports 80 et 8080 ne sont pas déjà utilisés par une autre application sur votre machine avant de lancer le conteneur.
+
+### 3 Installation Manuelle
+#### 3.1 Prérequis
+**Client (Front-end) :**
+  - Node.js & npm
+  - Angular CLI (npm install -g @angular/cli)
+  - Navigateur compatible (Chrome/Firefox)
+
+**Serveur (Back-end) :**
+  - Java 11 (Amazon Corretto recommandé)
+  - PostgreSQL
+  - IntelliJ IDEA (ou autre IDE Java)
+
+#### 3.2 Configuration du Serveur (Back-end)
 1. Base de données : Créez une base de données nommée service_worker dans PostgreSQL et chargez le fichier service_worker.sql.
 2. Propriétés : Modifiez src/main/resources/application.properties avec vos identifiants de connexion.
 3. IDE : Ouvrez le projet dans IntelliJ, configurez le SDK sur Java 11 et lancez la classe principale com.example.demo.DemoApplication.
 
-### 3. Configuration du Client (Front-end)
+#### 3.3 Configuration du Client (Front-end)
 1. Accédez au dossier : cd service-worker-client.
 2. Installez les dépendances : npm install.
 3. Lancez l'application : ng serve.
