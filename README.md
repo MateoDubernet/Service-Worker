@@ -4,11 +4,9 @@
 Ce projet a été réalisé dans un cadre d'étude et d'auto-formation durant mon alternance. L'objectif était de maîtriser le cycle de vie des Service Workers et l'implémentation du protocole Web Push.
 
 Points clés techniques :
-    - Frontend (Angular) : Gestion du cycle de vie du Service Worker, interception des événements Push, et gestion des permissions navigateurs.
-
-    - Backend (Spring Boot) : API REST pour la gestion des Push Subscriptions et orchestration de l'envoi des payloads via la Web Push API.
-
-    - Infrastructure : Conteneurisation complète avec Docker pour un déploiement agnostique.
+- Frontend (Angular) : Gestion du cycle de vie du Service Worker, interception des événements Push, et gestion des permissions navigateurs.
+- Backend (Spring Boot) : API REST pour la gestion des Push Subscriptions et orchestration de l'envoi des payloads via la Web Push API.
+- Infrastructure : Conteneurisation complète avec Docker pour un déploiement agnostique.
 
 ---
 
