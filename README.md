@@ -19,8 +19,7 @@ Ce projet a été réalisé dans un cadre d'étude et d'auto-formation durant mo
     git clone https://github.com/MateoDubernet/service-worker.git
 ```
 
-### 2. Lancement Rapide (Docker)
-C'est la méthode la plus simple pour tester l'application sans rien installer sur votre machine (hormis Docker).
+### 2. Lancement (Docker)
 
 **Prérequis :** [Docker Desktop](https://www.docker.com/products/docker-desktop) installé et lancé.
 
@@ -36,28 +35,6 @@ C'est la méthode la plus simple pour tester l'application sans rien installer s
 
 [!IMPORTANT]
 Assurez-vous que les ports 80 et 8080 ne sont pas déjà utilisés par une autre application sur votre machine avant de lancer le conteneur.
-
-### 3 Installation et Lancement Manuel
-#### 3.1 Prérequis
-**Client (Front-end) :**
-  - Node.js & npm
-  - Angular CLI (npm install -g @angular/cli)
-
-**Serveur (Back-end) :**
-  - Java 11 (Amazon Corretto recommandé)
-  - PostgreSQL
-  - IntelliJ IDEA (ou autre IDE Java)
-
-#### 3.2 Configuration du Serveur (Back-end)
-1. Base de données : Créez une base de données nommée service_worker dans PostgreSQL et chargez le fichier service_worker.sql.
-2. Propriétés : Modifiez src/main/resources/application.properties avec vos identifiants de connexion.
-3. IDE : Ouvrez le projet dans IntelliJ, configurez le SDK sur Java 11 et lancez la classe principale com.example.demo.DemoApplication.
-
-#### 3.3 Configuration du Client (Front-end)
-1. Accédez au dossier : cd service-worker-client.
-2. Installez les dépendances : npm install.
-3. Lancez l'application : ng serve.
-4. Ouvrez votre navigateur à l'adresse : http://localhost:4200.
 
 ---
 
