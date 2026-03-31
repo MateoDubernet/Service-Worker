@@ -3,10 +3,11 @@
 ## Présentation
 Ce projet a été réalisé dans un cadre d'étude et d'auto-formation durant mon alternance. L'objectif était de maîtriser le cycle de vie des Service Workers et l'implémentation du protocole Web Push.
 
-Points clés techniques :
-- Frontend (Angular) : Gestion du cycle de vie du Service Worker, interception des événements Push, et gestion des permissions navigateurs.
-- Backend (Spring Boot) : API REST pour la gestion des Push Subscriptions et orchestration de l'envoi des payloads via la Web Push API.
-- Infrastructure : Conteneurisation complète avec Docker pour un déploiement agnostique.
+### Architecture :
+- **Front-end** : Angular & TypeScript (Gestion du cycle de vie du Service Worker, interception des événements Push, et gestion des permissions navigateurs).
+- **Back-end** : Spring Boot (API REST, Java 11), gestion des Push Subscriptions et orchestration de l'envoi des payloads via la Web Push API..
+- **Base de données** : PostgreSQL (Persistance des données).
+- **Infrastructure** : Docker & Docker Compose.
 
 **Prérequis pour ce projet :** Navigateur compatible avec les services workers et notifications push de préférence Chrome ou Firefox.
 
@@ -18,13 +19,14 @@ Points clés techniques :
     git clone https://github.com/MateoDubernet/service-worker.git
 ```
 
-### 2. Installation Rapide
-Le projet est entièrement conteneurisé. Une seule commande suffit pour lancer l'ensemble de l'architecture (Frontend, Backend, Base de données).
+### 2. Lancement Rapide (Docker)
+C'est la méthode la plus simple pour tester l'application sans rien installer sur votre machine (hormis Docker).
 
-**Prérequis :** Docker Desktop installé et lancé.
+**Prérequis :** [Docker Desktop](https://www.docker.com/products/docker-desktop) installé et lancé.
 
 #### 2.1 Lancement de l'application
 ```bash
+    cd ./service-worker
     docker-compose up --build
 ```
 
@@ -35,7 +37,7 @@ Le projet est entièrement conteneurisé. Une seule commande suffit pour lancer 
 [!IMPORTANT]
 Assurez-vous que les ports 80 et 8080 ne sont pas déjà utilisés par une autre application sur votre machine avant de lancer le conteneur.
 
-### 3 Installation Manuelle
+### 3 Installation et Lancement Manuel
 #### 3.1 Prérequis
 **Client (Front-end) :**
   - Node.js & npm
@@ -60,7 +62,6 @@ Assurez-vous que les ports 80 et 8080 ne sont pas déjà utilisés par une autre
 ---
 
 ## Fonctionnement du Système
-### Flux de travail
 1. Activation : L'utilisateur clique sur "Activer notification". Le navigateur demande la permission et enregistre le Service Worker.
 
 2. Abonnement : Le client génère une Push Subscription (endpoint + clés) et l'envoie au serveur qui la stocke en base de données.
