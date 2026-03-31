@@ -22,13 +22,12 @@ Ce projet a été réalisé dans un cadre d'étude et d'auto-formation durant mo
 ### 2. Lancement (Docker)
 **Prérequis :** [Docker Desktop](https://www.docker.com/products/docker-desktop) installé et lancé.
 
-#### 2.1 Lancement de l'application
 ```bash
     cd ./service-worker
     docker-compose up --build
 ```
 
-#### 2.2 Accès
+### 3. Accès
 - Interface Client : http://localhost (Port 80)
 - API Backend : http://localhost:8080
 
