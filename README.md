@@ -20,7 +20,6 @@ Ce projet a été réalisé dans un cadre d'étude et d'auto-formation durant mo
 ```
 
 ### 2. Lancement (Docker)
-
 **Prérequis :** [Docker Desktop](https://www.docker.com/products/docker-desktop) installé et lancé.
 
 #### 2.1 Lancement de l'application
