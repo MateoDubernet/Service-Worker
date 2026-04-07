@@ -1,5 +1,38 @@
-node_modules/
-dist/
+# Build artifacts
 target/
+build/
+out/
+
+# Dependency directories
+.gradle/
+.m2/
+
+# Wrapper executables
+.mvn/
+gradle/
+mvnw
+mvnw.cmd
+gradlew
+gradlew.bat
+
+# IDEs and configuration
+.vscode/
+.idea/
+*.iml
+.classpath
+.project
+.settings/
+.nb-cache/
+
+# Logs and temp files
+*.log
+tmp/
+
+# Docker specific
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# Version control
 .git/
-.env
+.gitignore
