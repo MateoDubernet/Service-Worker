@@ -4,9 +4,9 @@
 Ce projet a été réalisé dans un cadre d'étude et d'auto-formation durant mon alternance. L'objectif était de maîtriser le cycle de vie des Service Workers et l'implémentation du protocole Web Push.
 
 ### Stack Technique
-- **Angular**.
-- **Spring**.
-- **Docker**.
+- **Angular**
+- **Spring**
+- **Docker**
 
 ---
 
